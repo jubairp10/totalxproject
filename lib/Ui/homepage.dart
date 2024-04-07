@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:totalx/Ui/Adduser.dart';
+import 'package:totalx/Ui/search.dart';
 
 import 'custom/Iconbutton.dart';
 import 'custom/search_view.dart';
@@ -91,7 +92,8 @@ class _HomeState extends State<Home> {
                        color: Colors.white,
                        borderRadius: BorderRadius.circular(40.0)
                    ),
-                   child: TextField(controller: _seearchController,
+                   child: TextField(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>search()));
+                     },
                      decoration: InputDecoration(
                          prefixIcon: Icon(Icons.search),
                          hintText: 'search by name ',
